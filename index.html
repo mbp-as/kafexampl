@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  >
 <head>
-  <!-- Site made with Mobirise Website Builder v5.9.13, https://mobirise.com -->
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v5.9.13, mobirise.com">
@@ -30,47 +30,39 @@
 </head>
 <body>
   
-  <section data-bs-version="5.1" class="menu menu6 cid-u5uSkAXhQG" once="menu" id="menu06-0">
+    <section data-bs-version="5.1" class="menu menu6 cid-u5uSkAXhQG" once="menu" id="menu06-0">
 	
 
-
-	<nav class="navbar navbar-dropdown opacityScrollOff navbar-expand-lg">
-		<div class="container">
-			<div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="index.html">
-						<img src="assets/images/logoufml.png" alt="Mobirise Website Builder" style="height: 3rem;">
-					</a>
-				</span>
-				
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
-			<div class="collapse navbar-collapse opacityScrollOff" id="navbarSupportedContent">
-				<ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html">Головна</a></li><li class="nav-item">
-						<a class="nav-link link text-black text-primary display-4" href="page2.html" aria-expanded="false">Олімпіади</a>
-					</li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page1.html">Чому математика?</a></li><li class="nav-item dropdown">
-						<a class="nav-link link text-black text-primary dropdown-toggle display-4" href="page1.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Про кафедру</a><div class="dropdown-menu" aria-labelledby="dropdown-773"><a class="text-black text-primary dropdown-item display-4" href="page3.html">Хто ми?</a><a class="text-black text-primary dropdown-item display-4" href="page5.html">Історія та трошки географії</a><a class="text-black text-primary dropdown-item display-4" href="page4.html">Публікації</a></div>
-					</li></ul>
-				<div class="icons-menu">
-					<a class="iconfont-wrapper" href="page6.html">
-						<span class="p-2 mbr-iconfont mobi-mbri-user mobi-mbri"></span>
-					</a>
-					
-					
-					
-				</div>
-				
-			</div>
-		</div>
-	</nav>
-</section>
+        <nav class="navbar navbar-dropdown opacityScrollOff navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="index.html">
+                            <img src="assets/images/logoufml.png" alt="Mobirise Website Builder" style="height: 3rem;">
+                        </a>
+                    </span>
+                    
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse opacityScrollOff" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="index.html">Головна</a></li><li class="nav-item">
+                            <a class="nav-link link text-black text-primary display-4" href="page2.html" aria-expanded="false">Олімпіади</a>
+                        </li><li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="page1.html">Чому математика?</a></li><li class="nav-item dropdown">
+                            <a class="nav-link link text-black text-primary dropdown-toggle display-4" href="page1.html" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Про кафедру</a><div class="dropdown-menu" aria-labelledby="dropdown-773"><a class="text-black text-primary dropdown-item display-4" href="page3.html">Хто ми?</a><a class="text-black text-primary dropdown-item display-4" href="page5.html">Історія та трошки географії</a><a class="text-black text-primary dropdown-item display-4" href="page4.html">Публікації</a></div>
+                        </li></ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+    </section>
 
 <section data-bs-version="5.1" class="header16 cid-u5uVmDZ6Yj mbr-parallax-background" id="header17-2">
   
@@ -330,79 +322,114 @@
 </section>
 
 <script>
-    function loadData() {
+    const token = 'patVlC8bnvzPQ6QoM.03bdfb47cacf19d3b173491e4fb27d74daea2aa4c89f2e7ff209f0b54d016b77';
+    const baseUrl = 'https://api.airtable.com/v0/appv0DdjZYazsmRYY/tblaDNmIfq2LqyRjR';
   
-        fetch('future.json')
-            .then(response => response.json())
-            .then(data => {
-                const eventsContainer = document.getElementById('events-container');
+    const fetchData = async () => {
+      try {
+        const response = await fetch(baseUrl, {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
   
-                data.forEach(item => {
-                    const card = document.createElement('div');
-                    card.classList.add('col-12', 'col-lg-11', 'item', 'features-without-image');
-                    card.innerHTML = `
-                        <div class="item-wrapper">
-                            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5"><strong>${item.name}</strong></h5>
-                            <div class="details">
-                                <div class="details-item display-7">
-                                    <span class="mbr-iconfont details-icon mobi-mbri-calendar mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
-                                    <p class="mbr-tag mbr-fonts-style display-7">${item.date}<br></p>
-                                </div>
-                                <div class="details-item display-7">
-                                    <span class="mbr-iconfont details-icon mobi-mbri-timer mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
-                                    <p class="mbr-tag mbr-fonts-style display-7">${item.time}<br></p>
-                                </div>
-                                <div class="details-item display-7">
-                                    <span class="mbr-iconfont details-icon mobi-mbri-map-pin mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
-                                    <p class="mbr-tag mbr-fonts-style display-7">${item.location}<br></p>
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+  
+        const data = await response.json();
+        console.log(data); 
+  
+        const eventsContainer = document.getElementById('events-container'); 
+  
+        data.records.forEach(record => {
+          const name = record.fields.name;
+          const date = record.fields.date;
+          const time = record.fields.time;
+          const location = record.fields.location;
+          const description = record.fields.description;
+          const link = record.fields.link;
+          const textbtn = record.fields.textbtn;
+  
+          const card = document.createElement('div');
+          card.classList.add('col-12', 'col-lg-11', 'features-without-image');
+          card.innerHTML = `
+            <div class="item-wrapper">
+                <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-5"><strong>${name}</strong></h5>
+                    <div class="details">
+                        <div class="details-item display-7">
+                            <span class="mbr-iconfont details-icon mobi-mbri-calendar mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
+                                <p class="mbr-tag mbr-fonts-style display-7">${date}<br></p>
+                            </div>
+                            <div class="details-item display-7">
+                            <span class="mbr-iconfont details-icon mobi-mbri-timer mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
+                                <p class="mbr-tag mbr-fonts-style display-7">${time}<br></p>
+                            </div>
+                            <div class="details-item display-7">
+                                <span class="mbr-iconfont details-icon mobi-mbri-map-pin mobi-mbri" style="color: rgb(0, 0, 0); fill: rgb(0, 0, 0);"></span>
+                            <p class="mbr-tag mbr-fonts-style display-7">${location}<br></p>
                                 </div>
                             </div>
-                            <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">${item.description}</h6>
-                            <div class="mbr-section-btn"><a class="btn btn-secondary display-7" href="${item.link}">Дізнатись більше?</a></div>
-                        </div>
-                    `;
-                    eventsContainer.appendChild(card);
-                });
-            })
-            .catch(error => {
-                console.error('Проблеми з завантаженням данних:', error);
-            });
+                        <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">${description}</h6>
+                    <div class="mbr-section-btn"><a class="btn btn-warning display-7" href="${link}">${textbtn}</a></div>
+            </div>
+          `;
+          eventsContainer.appendChild(card); 
+        });
+      } catch (error) {
+        console.error('There was a problem fetching the data:', error);
+      }
+    };
+  
+    document.addEventListener('DOMContentLoaded', fetchData);
+</script>
+
+
+<script>
+    const tokenl = 'patl7D6flwXpHIyxr.1e983866cf51bfa9a741d1f81cfb8b9c5dd87e2dbbaa8e62d0e5692a50f382ab';
+    const baseUrll = 'https://api.airtable.com/v0/app5QSd61Z1acb7A6/tblI7RTG8oNb2XTxY';
+  
+    function loadData() {
+      fetch(baseUrll, {
+        headers: {
+          'Authorization': `Bearer ${tokenl}`
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const workshopsContainer = document.getElementById('workshops-container');
+  
+        data.records.forEach(record => {
+          const name = record.fields.name;
+          const date = record.fields.date;
+          const description = record.fields.description;
+  
+          const workshop = document.createElement('div');
+        workshop.classList.add('row', 'justify-content-left', 'item', 'features-without-image', 'mb-4', 'active');
+        workshop.innerHTML = `
+            <div class="col-12 col-lg-4">
+            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7"><strong>${name}</strong></h5>
+            <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">${date}</h6>
+        </div>
+            <div class="col-12 col-lg-8 item-wrapper">
+            <p class="mbr-text mbr-fonts-style mt-0 display-7">${description}</p>
+        </div>
+        `;
+          workshopsContainer.appendChild(workshop);
+        });
+      })
+      .catch(error => {
+        console.error('Проблеми з данними:', error);
+      });
     }
   
     document.addEventListener('DOMContentLoaded', loadData);
   </script>
-  
-  <script>
-    function loadData() {
-        fetch('past.json')
-            .then(response => response.json())
-            .then(data => {
-                const workshopsContainer = document.getElementById('workshops-container');
-
-                data.forEach(item => {
-                    const workshop = document.createElement('div');
-                    workshop.classList.add('col-12', 'col-lg-4', 'item', 'features-without-image', 'mb-4', 'active');
-                    workshop.innerHTML = `
-                        <div class="col-12 col-lg-4">
-                            <h5 class="mbr-card-title mbr-fonts-style mt-0 mb-3 display-7"><strong>${item.name}</strong></h5>
-                            <h6 class="mbr-card-subtitle mbr-fonts-style mt-0 mb-3 display-7">${item.date}</h6>
-                        </div>
-                        <div class="col-12 col-lg-8 item-wrapper">
-                            <p class="mbr-text mbr-fonts-style mt-0 display-7">${item.description}</p>
-                        </div>
-                    `;
-                    workshopsContainer.appendChild(workshop);
-                });
-            })
-            .catch(error => {
-                console.error('Проблеми з данними:', error);
-            });
-    }
-
-    document.addEventListener('DOMContentLoaded', loadData);
-</script>
-
-
 
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/parallax/jarallax.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/masonry/masonry.pkgd.min.js"></script>  <script src="assets/imagesloaded/imagesloaded.pkgd.min.js"></script>  <script src="assets/theme/js/script.js"></script>  <script src="assets/gallery/player.min.js"></script>  <script src="assets/gallery/script.js"></script>  
   
