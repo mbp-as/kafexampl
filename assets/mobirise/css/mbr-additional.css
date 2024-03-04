@@ -6467,42 +6467,20 @@ a {
     padding: 1rem;
   }
 }
-.cid-u5ATmGqjvl {
+.cid-u63WIoWtSh {
   display: flex;
+  padding-top: 8rem;
+  padding-bottom: 0rem;
+  background-image: url("../../../assets/images/1.png");
 }
-@media (min-width: 768px) {
-  .cid-u5ATmGqjvl {
-    align-items: flex-end;
-  }
-  .cid-u5ATmGqjvl .row {
-    justify-content: flex-start;
-  }
-  .cid-u5ATmGqjvl .content-wrap {
-    padding: 1rem 3rem;
-  }
+.cid-u63WIoWtSh .mbr-overlay {
+  background-color: #ffffff;
+  opacity: 0.9;
 }
-@media (max-width: 991px) and (min-width: 768px) {
-  .cid-u5ATmGqjvl .content-wrap {
-    min-width: 50%;
-  }
-}
-@media (max-width: 767px) {
-  .cid-u5ATmGqjvl {
-    -webkit-align-items: center;
-    align-items: flex-end;
-  }
-  .cid-u5ATmGqjvl .mbr-row {
-    -webkit-justify-content: center;
-    justify-content: center;
-  }
-  .cid-u5ATmGqjvl .content-wrap {
-    width: 100%;
-  }
-}
-.cid-u5ATmGqjvl .mbr-fallback-image.disabled {
+.cid-u63WIoWtSh .mbr-fallback-image.disabled {
   display: none;
 }
-.cid-u5ATmGqjvl .mbr-fallback-image {
+.cid-u63WIoWtSh .mbr-fallback-image {
   display: block;
   background-size: cover;
   background-position: center center;
@@ -6510,19 +6488,49 @@ a {
   height: 100%;
   position: absolute;
   top: 0;
-  background-image: url("../../../assets/images/background1.jpg");
 }
-.cid-u5ATmGqjvl .mbr-section-title,
-.cid-u5ATmGqjvl .mbr-section-subtitle {
-  text-align: left;
-  color: #ffc091;
+.cid-u63WIoWtSh .content-wrap {
+  padding: 5rem 1rem;
 }
-.cid-u5ATmGqjvl .mbr-text,
-.cid-u5ATmGqjvl .mbr-section-btn {
-  text-align: left;
+@media (min-width: 992px) {
+  .cid-u63WIoWtSh .content-wrap {
+    padding: 5rem 3rem;
+  }
 }
-.cid-u5ATmGqjvl .mbr-section-title {
-  color: #ffffff;
+@media (min-width: 768px) {
+  .cid-u63WIoWtSh {
+    align-items: center;
+  }
+  .cid-u63WIoWtSh .row {
+    justify-content: center;
+  }
+}
+@media (max-width: 991px) and (min-width: 768px) {
+  .cid-u63WIoWtSh .content-wrap {
+    min-width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .cid-u63WIoWtSh {
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .cid-u63WIoWtSh .mbr-row {
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .cid-u63WIoWtSh .content-wrap {
+    width: 100%;
+  }
+}
+.cid-u63WIoWtSh .mbr-section-title {
+  text-align: center;
+  color: #000000;
+}
+.cid-u63WIoWtSh .mbr-text,
+.cid-u63WIoWtSh .mbr-section-btn {
+  text-align: center;
+  color: #000000;
 }
 .cid-u5YDZb60aJ {
   padding-top: 5rem;
